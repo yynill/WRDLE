@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+
+</head>
+
+<body>
+    <h1 id="title">Wordle</h1>   
+     <button id="MenueOpenBtn"><img src="images/menue.png" height="30px" width="30px"></button>
+
+    <hr>
+    <br>
+    <div id="board"></div>
+</body>
+<br>
+
+
+
+<body class="">
+
+    <div class="container">
+        <div class="keyboard_wrapp">
+            <div class="keyboard_keys">
+                <div class="row">
+                    <div class="keys">Q</div>
+                    <div class="keys">W</div>
+                    <div class="keys">E</div>
+                    <div class="keys">R</div>
+                    <div class="keys">T</div>
+                    <div class="keys">Y</div>
+                    <div class="keys">U</div>
+                    <div class="keys">I</div>
+                    <div class="keys">O</div>
+                    <div class="keys">P</div>
+                </div>
+                <div id="rowMoved" class="row">
+                    <div class="keys">A</div>
+                    <div class="keys">S</div>
+                    <div class="keys">D</div>
+                    <div class="keys">F</div>
+                    <div class="keys">G</div>
+                    <div class="keys">H</div>
+                    <div class="keys">J</div>
+                    <div class="keys">K</div>
+                    <div class="keys">L</div>
+                </div>
+                <div class="row">
+                    <div id="enter_key" class="keys enter_key" onclick="enterOnClick()">
+                        <img src="images/enter.png" alt="Back" style="width: 20px; height: 20px;">
+                    </div>
+                    <div class="keys">Z</div>
+                    <div class="keys">X</div>
+                    <div class="keys">C</div>
+                    <div class="keys">V</div>
+                    <div class="keys">B</div>
+                    <div class="keys">N</div>
+                    <div class="keys">M</div>
+                    <div id="backspace_key" class="keys backspace_key" onclick="deleteOnClick()">
+                        <img src="images/Backspace.png" alt="Back" style="width: 20px; height: 20px;">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 id="answer"></h2>
+
+    <button onClick="window.location.reload();">New Game</button>
+
+    <div class="menue" id="menue">
+
+        <div class="menueHeader">
+            <button id="MenueCloseBtn" class="closeBtn">&times;</button>
+            <div><h1>How To Play</h1></div>
+        </div>
+
+        <div class="menueBody">
+            <h2>Guess the Wordle in 6 tries.</h2>
+            <ul>
+                <li>Each guess must be a valid 5-letter word.</li>
+                <li>The color of the tiles will change to show how close your guess was to the word.</li>
+            </ul>
+            <br>
+            <b>Examples</b>
+            <div><img src="images/example green.png" alt="" style="width: 180px;"></div>
+            <b>W</b> is in the word and in the correct spot.
+            <br>
+            <div><img src="images/example yellow.png" alt="" style="width: 180px;"></div>
+            <b>I</b> is in the word but in the wrong spot.
+            <br>
+            <div><img src="images/example gray.png" alt="" style="width: 180px;"></div> 
+            <b>U</b> is not in the word in any spot.
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <!-- wordlField -->
+    <script src="wordle.js"></script>
+    <link rel="stylesheet" href="wordle.css">
+    <!-- keyboard -->
+    <link rel="stylesheet" href="keyboard/keyboard.css">
+    <script src="keyboard/keyboard.js"></script>
+    <!-- popup Menue -->
+    <link rel="stylesheet" href="popupMenue/pop.css">
+    <script src="popupMenue/pop.js"></script>
+
+</body>
+
+</html>

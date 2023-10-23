@@ -1,0 +1,73 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+#MenueOpenBtn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 75px;
+
+}
+
+.menue {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    z-index: 20;
+    background-color: white;
+    width: min(80%, 420px);
+    text-align: left;
+    padding: 30px;
+}
+
+.menue.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.menueHeader {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+
+.closeBtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    background-color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    background: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#overlay.active {
+    pointer-events: all;
+    opacity: 1;
+}
